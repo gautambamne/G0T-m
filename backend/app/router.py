@@ -1,0 +1,12 @@
+from fastapi import APIRouter
+from app.modules.user_service.router.auth_router import router as auth_router
+from app.modules.user_service.router.user_router import router as user_router
+from app.modules.user_service.router.session_router import router as session_router
+from app.modules.upload_service.router.upload_router import router as upload_router
+
+api_router = APIRouter(prefix="/api/v1")
+
+api_router.include_router(auth_router, prefix="/auth", tags=["auth"])
+api_router.include_router(user_router, prefix="/users", tags=["users"])
+api_router.include_router(session_router, prefix="/sessions", tags=["sessions"])
+api_router.include_router(upload_router, prefix="/uploads", tags=["uploads"])

@@ -1,0 +1,18 @@
+[project]
+name = "learn-fastapi"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "alembic>=1.18.0",
+    "asyncpg>=0.31.0",
+    "bcrypt==3.2.2",
+    "boto3>=1.42.27",
+    "fastapi-mail[httpx]>=1.6.1",
+    "fastapi[standard]>=0.128.0",
+    "passlib[bcrypt]>=1.7.4",
+    "pyjwt>=2.10.1",
+    "python-jose[cryptography]>=3.5.0",
+    "sqlalchemy>=2.0.45",
+]
